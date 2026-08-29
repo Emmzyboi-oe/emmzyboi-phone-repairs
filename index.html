@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Emmzyboi Phone Repairs</title>
+
+    <meta name="description"
+        content="Emmzyboi Phone Repairs - Premium phones, accessories and professional phone repair services.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #070707;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(7, 7, 7, 0.95);
+            border-bottom: 1px solid #242424;
+            backdrop-filter: blur(15px);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #d4af37;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        .cart {
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 25px;
+            background:
+                radial-gradient(circle at 80% 20%, rgba(212,175,55,0.16), transparent 30%),
+                radial-gradient(circle at 20% 80%, rgba(212,175,55,0.08), transparent 30%),
+                #070707;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 15px;
+            border: 1px solid #d4af37;
+            color: #d4af37;
+            border-radius: 30px;
+            font-size: 12px;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            max-width: 800px;
+            font-size: clamp(45px, 8vw, 90px);
+            line-height: 0.98;
+            margin-bottom: 25px;
+        }
+
+        .gold {
+            color: #d4af37;
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: #aaa;
+            font-size: 18px;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .primary {
+            background: #d4af37;
+            color: #070707;
+        }
+
+        .primary:hover {
+            transform: translateY(-3px);
+        }
+
+        .secondary {
+            border: 1px solid #444;
+            color: #ffffff;
+        }
+
+        .secondary:hover {
+            border-color: #d4af37;
+            color: #d4af37;
+        }
+
+        /* SECTION */
+
+        .section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 90px 25px;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-heading h2 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .section-heading p {
+            color: #888;
+        }
+
+        /* CARDS */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #111111;
+            border: 1px solid #252525;
+            border-radius: 18px;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: #d4af37;
+        }
+
+        .card-icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #888;
+        }
+
+        /* REFERRAL */
+
+        .referral {
+            background:
+                linear-gradient(135deg, #17130a, #0b0b0b);
+            border: 1px solid #5b4a17;
+            border-radius: 25px;
+            padding: 60px 30px;
+            text-align: center;
+        }
+
+        .referral h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .referral p {
+            color: #aaa;
+            max-width: 600px;
+            margin: 0 auto 25px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid #222;
+            padding: 40px 25px;
+            text-align: center;
+            color: #777;
+        }
+
+        footer strong {
+            color: #d4af37;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                min-height: 80vh;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 52px;
+            }
+
+            .section-heading h2 {
+                font-size: 32px;
+            }
+
+            .referral h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="navbar">
+
+            <div class="logo">
+                EMMZYBOI <span>PHONE REPAIRS</span>
+            </div>
+
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#shop">Shop</a>
+                <a href="#repairs">Repairs</a>
+                <a href="#referral">Refer & Earn</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="cart">
+                🛒 Cart
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                PREMIUM PHONE STORE & REPAIR CENTER
+            </div>
+
+            <h1>
+                Your Phone.<br>
+                Our <span class="gold">Expertise.</span>
+            </h1>
+
+            <p>
+                Discover quality smartphones, premium accessories
+                and professional phone repairs — all in one place.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#shop" class="btn primary">
+                    SHOP NOW
+                </a>
+
+                <a href="#repairs" class="btn secondary">
+                    BOOK A REPAIR
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SHOP -->
+
+    <section class="section" id="shop">
+
+        <div class="section-heading">
+
+            <h2>
+                Shop <span class="gold">With Us</span>
+            </h2>
+
+            <p>
+                Everything you need for your phone.
+            </p>
+
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="card-icon">📱</div>
+
+                <h3>Smartphones</h3>
+
+                <p>
+                    Shop quality iPhones, Samsung, Tecno,
+                    Infinix and other smartphones.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">🎧</div>
+
+                <h3>Accessories</h3>
+
+                <p>
+                    Chargers, cables, cases, earbuds,
+                    power banks and more.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">🛍️</div>
+
+                <h3>Special Deals</h3>
+
+                <p>
+                    Discover selected products and
+                    special offers.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- REPAIRS -->
+
+    <section class="section" id="repairs">
+
+        <div class="section-heading">
+
+            <h2>
+                Professional <span class="gold">Repairs</span>
+            </h2>
+
+            <p>
+                We help bring your device back to life.
+            </p>
+
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="card-icon">📱</div>
+
+                <h3>Screen Replacement</h3>
+
+                <p>
+                    Professional screen replacement
+                    for damaged or broken displays.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">🔋</div>
+
+                <h3>Battery Replacement</h3>
+
+                <p>
+                    Replace weak or damaged batteries
+                    and restore your phone's performance.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">🔌</div>
+
+                <h3>Charging Port</h3>
+
+                <p>
+                    Charging problems, loose ports
+                    and connection issues.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- REFERRAL -->
+
+    <section class="section" id="referral">
+
+        <div class="referral">
+
+            <h2>
+                Refer & Earn <span class="gold">₦500</span>
+            </h2>
+
+            <p>
+                Invite your friends to shop with Emmzyboi.
+                When your referred customer makes a qualifying
+                purchase, you earn ₦500.
+            </p>
+
+            <a href="#" class="btn primary">
+                START REFERRING
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="section" id="contact">
+
+        <div class="section-heading">
+
+            <h2>
+                Contact <span class="gold">Emmzyboi</span>
+            </h2>
+
+            <p>
+                Ready to shop or repair your device?
+                We're here to help.
+            </p>
+
+            <div class="buttons" style="justify-content:center;">
+
+                <a href="#" class="btn primary">
+                    CHAT ON WHATSAPP
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 <strong>Emmzyboi Phone Repairs</strong>.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
